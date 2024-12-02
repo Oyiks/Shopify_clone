@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shopify Hackathon</title>
+    
+    <link 
+    rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link 
+    rel="preconnect" 
+    href="https://fonts.gstatic.com" crossorigin>
+    
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" 
+    rel="stylesheet">
+    
+    <link
+    rel="stylesheet" href="styles.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+
+    <!-- navigation starts here -->
+    <nav class="nav_container">
+      <div class="logo">
+      <a href="https://www.shopify.com/" 
+      target="_blank">
+      <picture>
+        <source media="(max-width: 480px)" srcset="images/Shopify-mobile.png" />
+        <source media="(min-width: 1400px)" srcset="images/Group.svg" />
+        <img src="images/Group.svg" 
+        alt="Shopify logo" />
+      </picture>
+      
+      </a> 
+      </div> 
+      
+      <div class="search">
+        <label>
+        <input class="search" type="text" placeholder="Search" />
+        </label>
+      </div>
+
+      <div class='btn'>
+      <div >
+        <button class="alert-trigger"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="profile-menu-content"
+        >
+        <img src="images/Icons.svg" alt="bell icon">
+        </button>
+
+        <ul 
+        class="menu-active" 
+        id="profile-menu-content"
+        aria-labelledby="profile-menu"
+        role="menu"
+        >
+        
+        <div class="alert-wrapper">
+        <li class="menu-item">
+            Alert
+        </li>
+        
+        <!-- dropdown menu starts here-->
+        <div class="menu-icon">
+          <li class="menu-item">
+            <img src="images/FilterMajor.svg">
+          </li>
+
+          <li class="menu-item">
+            <img src="images/CircleTickMajor.svg">
+          </li>
+        </div>
+        </div>
+
+         <li>
+            <div class="alert-paragraph">
+              <p>Alerts about your store and account will show here</p>
+            </div>
+         </li>
+        </ul>
+      </div> 
+
+      <div class="menu-wrapper">
+        <button 
+        id="profile-menu" 
+        class="profile-trigger"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="profile-menu-content"
+        >
+          Davii Collections
+
+          <img src="https://placehold.co/28x28/36fba1/00000066.png?text=DC" 
+          alt="placeholder image"
+          class="placeholder-image"
+          />
+        </button>
+        
+        <ul class="menu-active" id="profile-dropdown-content">
+          
+          <li class="dropdown-menu-item">
+            <input class="dropdown-input" 
+            type="text" 
+            placeholder="Davii Collections"> 
+          </li>
+          <!-- dropdown menu ends here -->
+          
+          <!-- Another dropdown menu starts here -->
+          <div>
+          <li class="dropdown-menu-item">
+            <div class="store">
+            <div>
+            <img src="images/StoreMinor.svg">
+            </div>
+            <div>
+            <p>All Stores</p>
+            <div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="dropdown-menu-item">
+            <p>Store Center</p>
+          </li>
+
+          <li class="dropdown-menu-item">
+            <p>Changelog</p>
+          </li>
+
+          <li class="dropdown-menu-item">
+            <p>Community forums</p>
+          </li>
+
+          <li class="dropdown-menu-item">
+            <p>Hire a Shopify Partner</p>
+          </li>
+
+          <li class="dropdown-menu-item">
+            <p>Keyboard Shortcuts</p>
+          </li>
+          <hr>
+
+          <li class="dropdown-menu-item">
+            <p>David Micheal <br> <span>davidmicheal@gmail.com</span></p>
+          </li>
+
+          <li class="dropdown-menu-item">
+            <p>Manage account</p>
+          </li>
+
+          <li class="dropdown-menu-item">
+            <p>Logout</p>
+          </li>
+        </ul>
+      </div>
+      <!-- dropdown menu ends here -->
+
+
+    </div>
+    </nav>
+    <!-- Nagivation ends here --> 
+
+    <main>
+
+      <!-- Advert card component starts here -->
+      <div class="advert advert-active">
+        <div class="advert-message">
+        <p>Extend your trial for $1/month for 3 months on select plans</p>
+        </div>
+
+        <div class="advert-button">
+        <a href="https://www.shopify.com/pricing" 
+        target="_blank"
+        >
+        <button class="advert-btn">
+        Select a plan
+        </button>
+        </a>
+        <img class="cancel_icon" src="images/cancel_icon.svg"
+        alt="cancel icon"
+        >
+      </div>
+    </div>
+    <!-- Advert card component ends here -->
+
+    <!-- Accordion menu component starts here -->
+      <div class="accordion-container">
+        <div class="accordion-header">
+        
+        <div>
+        <h2>Setup Guide</h2>
+        </div>
+
+        <div>  
+          <img src="images/chevron_icon.svg"
+          class="chevron"
+          alt="up chevron icon">
+        </div>
+        </div>
+
+        <div class="accordion-header-paragraph">
+          Use this personalised guide to get your store up and running
+        </div>
+
+        <div>
+        <div class="progress-text">
+          <div><span class="progress-status">0</span> / 5 completed </div>
+          <progress id="myprogress" max="100" value="0">
+          </progress>
+        </div>
+
+          <!-- customize section here -->
+          <div class="loading-texts">
+            <div>
+            <img src="images/loading_icon.svg"
+            alt="loading_icon icon"
+            > 
+            </div>
+            <div>
+            <span> Customize your online store </span>
+            </div>
+          </div>
+
+          <div class="accordion-menu" id="active">
+            <div class="accordion-content">
+              <div class="loading-text">
+                <div>
+                <img src="images/loading_icon.svg"
+                alt="loading_icon icon"
+                > 
+                </div>
+                <div>
+                <span> Customize your online store </span>
+                </div>
+              </div>
+
+              <p class="accordion-content-paragraph"> 
+                Choose a theme and add your logo, colors, and images to reflect your brand. <br>
+              <a href="#"> Learn more </a>
+              </p>
+              <button class="payment-button">
+                Customize theme 
+              </button>
+            </div>
+
+              <div class="accordion-image">
+                <img src="images/Customize.png"
+                alt="image of shirt, eyeglass and sandals"
+                >  
+              </div>
+          </div> 
+
+          <!-- product section -->
+          <div class="loading-texts">
+            <div>
+            <img src="images/loading_icon.svg"
+            alt="loading_icon icon"
+            > 
+            </div>
+            <div>
+            <span> Add your first product </span>
+            </div>
+          </div>
+
+          <div class="accordion-menu" id="active">
+              <div class="accordion-content">
+                <div class="loading-text">
+                  <div>
+                  <img src="images/loading_icon.svg"
+                  alt="loading_icon icon"
+                  > 
+                  </div>
+                  <div>
+                  <span> Add your first product </span>
+                  </div>
+                </div>
+
+                <p class="accordion-content-paragraph"> 
+                  Write a description, add photos, 
+                and set pricing for the products you plan to <br> sell. 
+                <a href="#"> Learn more </a>
+                </p>
+                <button class="payment-button">
+                  Add product 
+                </button>
+                <span> Import product </span>
+              </div>
+
+                <div class="accordion-image">
+                  <img src="images/Add_product.png"
+                  alt="image of shirt, eyeglass and sandals"
+                  >  
+                </div>
+              </div>
+
+          <!-- Add domain section -->
+          <div class="loading-texts">
+            <div>
+            <img src="images/loading_icon.svg"
+            alt="loading_icon icon"
+            > 
+            </div>
+            <div>
+            <span> Add a custom domain </span>
+            </div>
+          </div>
+
+          <div class="accordion-menu" id="active">
+            <div class="accordion-content">
+              <div class="loading-text">
+                <div>
+                <img src="images/loading_icon.svg"
+                alt="loading_icon icon"
+                >
+                </div>
+                <div>
+                <span> Add a custom domain </span> 
+                </div>
+              </div>
+
+              <p class="accordion-content-paragraph">
+                Your temporary store name is currently Davii collections. The store name <br>
+                 appears in your admin and your online store 
+                <a href="#"> Learn more </a>
+              </p>
+              <button class="payment-button">
+                Add domain 
+              </button>
+            </div>
+
+                <div class="accordion-image">
+                  <img src="images/Add_domain.png"
+                  alt="illustration of a website"
+                  > 
+                </div>
+            </div>
+
+            <!-- Naming store section -->
+            <div class="loading-texts">
+              <div>
+              <img src="images/loading_icon.svg"
+              alt="loading_icon icon"
+              > 
+              </div>
+              <div>
+              <span> Name your store </span>
+              </div>
+            </div>
+
+            <div class="accordion-menu" id="active">
+              <div class="accordion-content">
+                <div class="loading-text">
+                  <div>
+                    <img src="images/loading_icon.svg"
+                    alt="loading_icon icon"
+                    >
+                  </div>
+                  <div>
+                  <span> Name your store </span>
+                  </div>
+                </div>
+                
+                <p class="accordion-content-paragraph">
+                  Your current domain is 222219.myshopify.com but you can add a custom <br>
+                  domain to help customers find your online store 
+                  <a href="#"> Learn more </a>
+                </p>
+                <button class="payment-button">
+                  Name Store 
+                </button>
+              </div>
+
+                <div class="accordion-image">
+                  <img src="images/Name_store.png"
+                  alt="image of a young lad on the right and illustration
+                  on the left"
+                  > 
+                </div>
+            </div>
+
+            <!-- payment section -->
+            <div class="loading-texts">
+              <div>
+              <img src="images/loading_icon.svg"
+              alt="loading_icon icon"
+              > 
+              </div>
+              <div>
+              <span> Set up a payment provider </span>
+              </div>
+            </div>
+
+            <div class="accordion-menu" id="active">
+              <div class="accordion-content">
+                <div class="loading-text">
+                  <div>
+                    <img src="images/loading_icon.svg"
+                    alt="loading_icon icon"
+                    >
+                  </div>
+                  <div>
+                  <span> Set up a payment provider </span>
+                  </div>
+                </div>
+                
+              <p class="accordion-content-paragraph">
+                Choose a payment provider to start accepting payments. You’ll need to create <br>
+                an account with the payment provider and set it up with your Shopify store
+                <a href="#"> Learn more </a>
+              </p>
+              <button class="payment-button">
+                Set up payment 
+              </button>
+            </div>
+
+                <div class="accordion-image">
+                  <img src="images/Set_payment.png"
+                  alt="image of VISA card and illustration
+                  of web layout"
+                  > 
+                </div>
+            </div>
+
+          </div>
+        </div>
+
+      <!-- Accordion component ends here-->
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
