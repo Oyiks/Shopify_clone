@@ -109,3 +109,25 @@ function updateProgressBar3() {
 }
 
 updateProgressBar3();
+
+function updateProgressBar4() {
+  const payment = document.querySelector(".payment-button4");
+
+  payment.addEventListener("click", function () {
+    document.getElementById("myprogress").value += 20;
+    document.querySelector(".progress-bar").innerText += 1;
+  });
+}
+
+updateProgressBar4();
+
+function updateProgressBar5() {
+  const payment = document.querySelector(".payment-button5");
+
+  payment.addEventListener("click", function () {
+    document.getElementById("myprogress").value += 20;
+    document.querySelector(".progress-bar").innerText += 1;
+  });
+}
+
+updateProgressBar5();
