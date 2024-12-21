@@ -81,7 +81,7 @@ function updateProgressBar() {
   const payment = document.querySelector(".payment-button");
 
   payment.addEventListener("click", function () {
-    document.getElementById("myprogress").value = 20;
+    document.getElementById("myprogress").value += 20;
     document.querySelector(".progress-bar").innerText += 1;
   });
 }
