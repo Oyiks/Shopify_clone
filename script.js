@@ -87,3 +87,25 @@ function updateProgressBar() {
 }
 
 updateProgressBar();
+
+function updateProgressBar2() {
+  const payment = document.querySelector(".payment-button2");
+
+  payment.addEventListener("click", function () {
+    document.getElementById("myprogress").value += 20;
+    document.querySelector(".progress-bar").innerText += 1;
+  });
+}
+
+updateProgressBar2();
+
+function updateProgressBar3() {
+  const payment = document.querySelector(".payment-button3");
+
+  payment.addEventListener("click", function () {
+    document.getElementById("myprogress").value += 20;
+    document.querySelector(".progress-bar").innerText += 1;
+  });
+}
+
+updateProgressBar3();
