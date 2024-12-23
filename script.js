@@ -61,8 +61,8 @@ showAccordion();
 function displayAccordion() {
   const accordionTrigger = document.querySelectorAll(".loading-texts");
   console.log(accordionTrigger);
-  const menu = document.querySelector("#active");
-  console.log(menu);
+  // const menu = document.querySelector("#active");
+  // console.log(menu);
   var i;
 
   for (i = 0; i < accordionTrigger.length; i++) {
@@ -73,8 +73,8 @@ function displayAccordion() {
       } else {
         menu.style.display = "none";
       }
-      menu.style.display = "flex";
-      accordionTrigger.style.display = "none";
+      // menu.style.display = "flex";
+      // accordionTrigger.style.display = "none";
     });
   }
 }
