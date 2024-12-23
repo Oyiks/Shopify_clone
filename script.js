@@ -60,7 +60,6 @@ showAccordion();
 
 function displayAccordion() {
   const accordionTrigger = document.querySelectorAll(".loading-texts");
-  console.log(accordionTrigger);
   // const menu = document.querySelector("#active");
   // console.log(menu);
   var i;
